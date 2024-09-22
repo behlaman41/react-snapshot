@@ -1,8 +1,12 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/manifest.json",
-      "destination": "/public/manifest.json"
+      "src": "package.json",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
